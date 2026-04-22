@@ -16,8 +16,3 @@ jobs:
 
       - name: Say Hello
         run: echo "✅ GitHub Actions is working!"
-
-      - name:Run docker file
-        run: 1
-        src: examples
-        app.py
