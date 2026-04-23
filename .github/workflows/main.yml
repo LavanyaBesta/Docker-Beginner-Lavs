@@ -12,7 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-    
-      - name: Build Docker Image
-        run: docker build -t app.py ./examples
+      - name: Debug – show files
+        run: ls -R
 
+      - name: Build Docker Image
+        run: docker build -t demo-image ./examples/first-docker-file
