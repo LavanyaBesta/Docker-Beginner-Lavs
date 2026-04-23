@@ -17,26 +17,8 @@ jobs:
 
       - name: Build Docker Image
         run: docker build -t demo-image ./examples/first-docker-file
-
-      -name: Docker Build Demo
-
-on:
-  push:
-    branches: [ main ]
-  workflow_dispatch:
-
-jobs:
-  docker:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Debug – show files
-        run: ls -R
-
-      - name: Build Docker Image
-        run: docker build -t demo-image ./examples/first-docker-file
-
+      
       - name: Run Docker Container
         run: docker run demo-image
+
+
