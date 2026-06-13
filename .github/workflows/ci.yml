@@ -1,0 +1,10 @@
+name: Github actions Demo
+on: [push]
+jobs:
+  Explore-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+      - name: welcome message
+        run: echo "Succesfully triggered on push"
